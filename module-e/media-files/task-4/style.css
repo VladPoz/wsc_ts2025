@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body{
+    background-color: #e8e8e8;
+}
+.main__contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.btn{
+    position: relative;
+    height: 100px;
+    width: 200px;
+    border-radius: 55px;
+    background-color: #2a2a2a;
+    box-shadow: 0 0 2px #2a2a2a;
+    overflow: hidden;
+    transition: .3s;
+}
+.btn::after{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    width: 55px;
+    height: 55px;
+    background-color: #2a2a2a;
+    border-radius: 55px;
+    transition: .3s;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 25px;
+    width: 55px;
+    height: 55px;
+    background-color: #ffffff;
+    border-radius: 55px;
+    transition: .3s;
+}
+.cloud{
+    position: absolute;
+    width: 150px;
+    bottom: -50px;
+    left: -45px;
+    transition: .3s;
+    opacity: 0;
+}
+.star{
+    list-style: none;
+    position: absolute;
+    width: 12px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 55px;
+}
+.star1{
+    right: 55px;
+    top: 25px;
+}
+.star2{
+    right: 30px;
+    top: 45px;
+}
+.star3{
+    right: 65px;
+    top: 60px;
+}
+input:checked ~ .btn{
+    background-color: #01a5f9;
+}
+input:checked ~ .btn::before{
+    background-color: #ffcf4f;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    left: 125px;
+}
+input:checked ~ .btn::after{
+    opacity: 0;
+    transform: scale(0);
+    left: 135px;
+}
+input:checked ~ .btn .cloud{
+    opacity: 1;
+}
+input:checked ~ .btn .star{
+    opacity: 0;
+}
+.hide{
+    display: none;
+}

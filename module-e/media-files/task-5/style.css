@@ -1,0 +1,54 @@
+/* Общие классы */
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+/* Задний фон */
+body{
+    background-color: #212121;
+}
+/* Главный контенер */
+.main__contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+/* Элементы загрузки */
+li{
+    list-style: none;
+    width: 7px;
+    height: 75px;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 55px;
+    animation: load .9s ease-in-out infinite alternate;
+}
+#li2{
+    height: 100px;
+    animation-delay: .3s;
+}
+#li3{
+    animation-delay: .6s;
+}
+/* Анимация */
+@keyframes load {
+    0%{
+        transform: scaleY(1);
+        opacity: .6;
+    }
+    50%{
+        transform: scaleY(1.5);
+        opacity: 1;
+    }
+    100%{
+        transform: scaleY(1);
+        opacity: .6;
+    }
+}

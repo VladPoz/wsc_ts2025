@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    transition: .3s;
+}
+body{
+    background-color: #212121;
+}
+.main__content{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #212121;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.mail__text{
+    background-color: #f0f0f0;
+    background-image:
+        linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 320px;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+}
+.hz {
+	border-bottom: 50px solid #fff;
+	border-left: 85px solid transparent;
+	border-right: 85px solid transparent;
+	height: 0;
+	width: 100px;
+    opacity: 0;
+    transform: translateY(10px);
+}
+.mail{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 320px;
+    background-color: #e4e9e8;
+    border-radius: 15px;
+}
+.mail p{
+    z-index: 1;
+    font-size: 122px;
+    font-weight: 700;
+}
+.mail::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 5px;
+	border-left: 155px solid transparent;
+	border-right: 155px solid transparent;
+	border-top: 95px solid #c7ccc7;
+    transition: .3s;
+}
+.mail:hover{
+    border-radius: 0 0 15px 15px;
+}
+.mail:hover::after{
+    transform: rotateX(90deg);
+}
+.mail:hover ~ .mail__text{
+    opacity: 1;
+    transform: translateY(0)
+}
+.mail:hover ~ .hz{
+    opacity: 1;
+    transform: translateY(0)
+}

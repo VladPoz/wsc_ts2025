@@ -1,0 +1,63 @@
+@font-face {
+    font-family: convergence;
+    src: url(./convergence-regular.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body{
+    background-color: #060b23;
+}
+.main__contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main__contents__input{
+    position: relative;
+}
+.main__input{
+    transition: .3s;
+    width: 275px;
+    font-family: convergence;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    padding: 15px 0px 15px 23px;
+    margin-top: 400px;
+    background: none;
+    border: 2px solid #e1e5ee;
+    border-radius: 10px;
+    color: white;
+}
+.main__input:hover{
+    border-color: #adffff;
+}
+.main__input:focus{
+    border-color: #18ffff;
+}
+.main__input:focus ~ .main__input__description{
+    transform: scale(0.8);
+    left: 0;
+    bottom: 40px;
+}
+.main__input:not(:placeholder-shown) ~ .main__input__description{
+    transform: scale(0.8);
+    left: 0;
+    bottom: 40px;
+}
+.main__input__description{
+    user-select: none;
+    transition: .3s;
+    padding: 5px;
+    background-color: #060b23;
+    position: absolute;
+    left: 25px;
+    bottom: 12px;
+    color: white;
+    font-family: convergence;
+    font-size: 20px;
+    font-weight: 500;
+}
